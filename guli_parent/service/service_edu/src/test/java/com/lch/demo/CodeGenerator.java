@@ -80,7 +80,7 @@ public class CodeGenerator {
         //包 con.lch.eduService
         // Todo 改包配置
         pc.setParent("com.lch");
-        pc.setModuleName(scanner("eduservice"));
+        pc.setModuleName("eduservice");
 
         pc.setController("controller");
         pc.setEntity("entity");
@@ -151,7 +151,7 @@ public class CodeGenerator {
         //// 写于父类中的公共字段
         //strategy.setSuperEntityColumns("id");
         //Todo 表名配置
-        strategy.setInclude(scanner("edu_teacher").split(","));
+        strategy.setInclude("edu_subject");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_");//生成式去掉前缀
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略

@@ -21,7 +21,7 @@ public class EduLoginController {
     @ApiOperation("登录")
     @PostMapping("/login")
     public Result login(){
-        System.out.println("login");
+        //System.out.println("login");
         return Result.ok().data("token","admin");
     }
 
@@ -29,7 +29,7 @@ public class EduLoginController {
     @ApiOperation("获取信息")
     @GetMapping("/info")
     public Result info(){
-        System.out.println("info");
+        //System.out.println("info");
         return Result.ok()
                 .data("roles","[admin]")
                 .data("name","admin")

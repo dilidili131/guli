@@ -31,7 +31,7 @@ import java.util.Map;
 @Api(description = "讲师管理")
 @RestController
 @CrossOrigin
-@RequestMapping("/eduservice/teacher")
+@RequestMapping("/eduService/teacher")
 public class EduTeacherController {
 
     @Autowired
@@ -107,6 +107,7 @@ public class EduTeacherController {
             @RequestBody(required = false) TeacherQuery teacherQuery
     ){
 
+
         //分页
         Page<EduTeacher> page = new Page<>(current,limit);
         QueryWrapper<EduTeacher> wrapper = new QueryWrapper<>();
@@ -123,20 +124,21 @@ public class EduTeacherController {
             wrapper.eq("level",level);
         }
         if(!StringUtils.isEmpty(begin)){
-            wrapper.ge("gmt_begin",begin);
+            wrapper.ge("gmt_create",begin);
         }
         if(!StringUtils.isEmpty(end)){
-            wrapper.le("gmt_begin",end);
+            wrapper.le("gmt_create",end);
         }
-
+        wrapper.orderByDesc("gmt_create");
         eduTeacherService.page(page, wrapper);
 
         //返回值
         long total = page.getTotal();
         List<EduTeacher> eduTeachers = page.getRecords();
+
         Map<String,Object> map = new HashMap<>();
         map.put("total",total);
-        map.put("lists",eduTeachers);
+        map.put("rows",eduTeachers);
         return Result.ok().data(map);
     }
 
