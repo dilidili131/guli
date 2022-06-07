@@ -1,18 +1,18 @@
 package com.lch.eduservice.mapper;
 
-import com.lch.eduservice.entity.EduTeacher;
+import com.lch.eduservice.entity.EduSubject;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
  * <p>
- * 讲师 Mapper 接口
+ * 课程科目 Mapper 接口
  * </p>
  *
  * @author lch
- * @since 2022-05-13
+ * @since 2022-06-03
  */
 @Mapper
-public interface EduTeacherMapper extends BaseMapper<EduTeacher> {
+public interface EduSubjectMapper extends BaseMapper<EduSubject> {
 
 }

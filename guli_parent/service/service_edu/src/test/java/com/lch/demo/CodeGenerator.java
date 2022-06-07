@@ -53,7 +53,7 @@ public class CodeGenerator {
         GlobalConfig gc = new GlobalConfig();
         // Todo 改地址
         //String projectPath = System.getProperty("user.dir");
-        gc.setOutputDir("D:\\code\\guli_parent\\service\\service_edu" + "/src/main/java");
+        gc.setOutputDir("D:\\code\\guli\\guli_parent\\service\\service_edu" + "\\src\\main\\java");
         gc.setAuthor("lch");//设置作者
         gc.setOpen(false);//生成后是否打开资源管理器
         gc.setFileOverride(false);//重新生成文件时是否覆盖
