@@ -20,7 +20,7 @@
                 <el-input v-model="eduTeacher.intro" :rows="5" type="textarea"></el-input>
             </el-form-item>
 
-            <!-- TODO 讲师头像 -->
+            <!--  讲师头像 -->
              <el-form-item label="讲师头像">
                 <!-- 头衔缩略图 -->
                 <pan-thumb :image="eduTeacher.avatar" />
@@ -136,7 +136,7 @@ export default {
                     this.$message({
                         type: 'danger',
                         message: '请完整填写信息'
-                    });  
+                    });
                 }
             })
         },
@@ -161,7 +161,7 @@ export default {
                     this.$message({
                         type: 'danger',
                         message: '请完整填写信息'
-                    });  
+                    });
                 }
             })
         },

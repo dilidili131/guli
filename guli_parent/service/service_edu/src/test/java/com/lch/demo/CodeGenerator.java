@@ -151,7 +151,7 @@ public class CodeGenerator {
         //// 写于父类中的公共字段
         //strategy.setSuperEntityColumns("id");
         //Todo 表名配置
-        strategy.setInclude("edu_subject");
+        strategy.setInclude("edu_course","edu_course_description","edu_chapter","edu_video");
         strategy.setNaming(NamingStrategy.underline_to_camel);//数据库映射到实体的命名策略
         strategy.setTablePrefix(pc.getModuleName() + "_");//生成式去掉前缀
         strategy.setColumnNaming(NamingStrategy.underline_to_camel);//数据库表字段映射到实体的命名策略

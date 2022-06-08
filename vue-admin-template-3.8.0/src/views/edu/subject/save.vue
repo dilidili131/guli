@@ -68,6 +68,7 @@ export default {
                     message:res.message
                 })
             }
+            this.$router.push({path:'/subject/list'})
         },
         // 上传失败
         fileUploadError(){
